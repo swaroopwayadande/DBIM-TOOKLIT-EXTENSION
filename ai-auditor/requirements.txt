@@ -1,0 +1,8 @@
+opencv-python
+numpy
+beautifulsoup4
+requests
+scikit-learn
+nltk
+textblob
+pillow

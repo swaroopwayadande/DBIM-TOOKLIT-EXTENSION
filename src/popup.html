@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGW Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="../icons/icon.png" alt="GIGW/DBIM Logo" id="logo-img">
+                <h1>DBIM v3 Toolkit</h1>
+            </div>
+            <div class="status-badge" id="scan-status">Ready</div>
+        </header>
+
+        <main>
+            <section class="summary-card">
+                <div class="score-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" id="score-path" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                    </svg>
+                </div>
+                <div class="summary-text">
+                    <h2>Compliance Score</h2>
+                    <p id="compliance-summary">Scan the page to see how it adheres to DBIM v3 & GIGW 3.0 guidelines.</p>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button id="scan-btn" class="primary-btn">Analyze Digital Platform</button>
+            </div>
+
+            <section class="results-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="dbim">DBIM 3.0</button>
+                    <button class="tab-btn" data-tab="accessibility">Accessibility</button>
+                    <button class="tab-btn" data-tab="security">Policy & Sec</button>
+                    <button class="tab-btn" data-tab="ai-insights" id="ai-tab-btn">Deep AI</button>
+                </div>
+
+                <div class="tab-content active" id="dbim">
+                    <div class="issue-list" id="dbim-issues">
+                        <!-- Issues will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="tab-content" id="accessibility">
+                    <div class="issue-list" id="accessibility-issues">
+                        <!-- Issues will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="tab-content" id="quality">
+                    <div class="issue-list" id="quality-issues">
+                        <!-- Issues will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="tab-content" id="security">
+                    <div class="issue-list" id="security-issues">
+                        <!-- Issues will be dynamically added here -->
+                    </div>
+                </div>
+                <div class="tab-content" id="ai-insights">
+                    <div class="ai-header">
+                        <div class="ai-pulse"></div>
+                        <span style="font-weight: 700; font-size: 12px;">ML Cognitive Audit (Beta)</span>
+                    </div>
+                    <div class="issue-list" id="ai-issues">
+                        <div class="issue-item ai-insight-card">
+                            <h3>Computer Vision & NLP</h3>
+                            <div class="issue-desc">Our ML models can detect tone of voice inconsistencies, color
+                                palette violations, and icon style mismatches across your entire site.</div>
+                            <button class="primary-btn" id="deep-scan-btn"
+                                style="margin-top: 10px; background: #4a6fff;">Launch Deep ML Scan</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Based on DBIM v3 Guidelines (MeitY, Jan 2025)</p>
+            <a href="https://dbimtoolkit.digifootprint.gov.in" target="_blank">DBIM Toolkit Library</a>
+        </footer>
+
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
